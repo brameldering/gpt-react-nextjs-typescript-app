@@ -20,7 +20,7 @@ const callGPT_API = async (name: string): Promise<string> => {
     if (axios.isAxiosError(error)) {
       return "An Axios error occurred " + error.message;
     } else {
-      return "An error occurred";
+      return "An error occurred ";
     }
   }
 };

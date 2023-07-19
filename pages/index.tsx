@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import callGPT_API from "./api/generateAPI";
+import styles from "./index.module.css";
 
 export default function Home() {
   const [animalInput, setAnimalInput] = useState("");
@@ -30,7 +31,7 @@ export default function Home() {
           <meta name='viewport' content='width=device-width, initial-scale=1' />
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <main>
+        <main className={styles.main}>
           <h3>Name my Pet</h3>
           <form onSubmit={handleSubmit}>
             <input
@@ -43,9 +44,11 @@ export default function Home() {
             <button type='submit' name='generate'>
               Generate
             </button>
-            {isFetching && <h3>Generating...</h3>}
-            {!isFetching && generatedNames && <h3>Generated Names:</h3>}
-            <p>{generatedNames}</p>
+            <div className={styles.result}>
+              {isFetching && <h3>Generating...</h3>}
+              {!isFetching && generatedNames && <h3>Generated Names:</h3>}
+              <p>{generatedNames}</p>
+            </div>
           </form>
         </main>
       </div>
