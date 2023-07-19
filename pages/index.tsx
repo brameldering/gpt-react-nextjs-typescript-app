@@ -11,15 +11,14 @@ export default function Home() {
     setAnimalInput(e.target.value);
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    (async () => {
-      setIsFetching(true);
-      await callGPT_API(animalInput);
-      const nameChoices = await callGPT_API(animalInput);
-      setGeneratedNames(nameChoices);
-      setIsFetching(false);
-    })();
+    setIsFetching(true);
+    await callGPT_API(animalInput);
+    const nameChoices = await callGPT_API(animalInput);
+    setGeneratedNames(nameChoices);
+    setIsFetching(false);
+    setAnimalInput("");
   };
 
   return (

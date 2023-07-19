@@ -3,8 +3,6 @@ import axios from "axios";
 const API_KEY = process.env.NEXT_PUBLIC_OPENAI_API_KEY;
 
 const callGPT_API = async (name: string): Promise<string> => {
-  console.log("api_key", API_KEY);
-  console.log("prompt", prompt);
   const response = await axios.post(
     "https://api.openai.com/v1/completions",
     {
