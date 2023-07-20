@@ -98,7 +98,9 @@ export default function Home() {
               <CircularProgress />
             </h4>
           )}
-          {!isFetching && generatedNames && !errorMessage && <h4>Generated Names:</h4>}
+          {!isFetching && generatedNames && generatedNames.length > 0 && !errorMessage && (
+            <h4>Generated Names:</h4>
+          )}
           <ul>{generatedNames && generatedNames.map((item) => <li key={item}>{item}</li>)}</ul>
         </div>
       </main>
