@@ -1,7 +1,9 @@
 {
-  "name": "gpt-react-nextjs-typescript-app",
+  "name": "pet-name-generator",
+  "description": "An app that generates pet names using the OpenAI GPT API. The app is written using React Nextjs Axios and Typescript.  Furthermore it uses MUI and emotion packages for the loading spinner",
   "version": "0.1.0",
   "private": true,
+  "author": "Bram Eldering",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

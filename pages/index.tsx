@@ -59,8 +59,7 @@ export default function Home() {
       "Give me five possible pet names consisting of a combination of multiple words for " +
       animalInput;
     const stringOfMultiWordNames = await callGPT_API(prompt);
-    // const stringOfMultiWordNames =
-    // "1. Mischievous Mittens in da house with funky paws 2. Prankster Patches 3. Frisky Fluffy 4. Plucky Paws 5. Playful Purrball";
+    // const stringOfMultiWordNames = "1. Mischievous Mittens in da house with funky paws 2. Prankster Patches 3. Frisky Fluffy 4. Plucky Paws 5. Playful Purrball";
     const arrayOfMultiWordNames = parseGeneratedNamesToArray(stringOfMultiWordNames);
     let arrayOfNames: string[];
     // combine one word and multi word names

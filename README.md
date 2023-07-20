@@ -1,6 +1,28 @@
+## Pet Name Generator
+
+Based on the example code for the Packt Training: Building a ChatGPT AI with JavaScript - An OpenAI Code-Along Guide By Clarian North.
+
+An app that generates pet names using the OpenAI GPT API. The app is written using React Nextjs Axios and Typescript. Furthermore it uses MUI and emotion packages for the loading spinner.
+
+I coded the application first before watching the training, except for the index.module.css file that i took from the example training code. Furthermore I made the following of enhancements:
+
+- Coded in TypeScript instead of JavaScript
+- Used Axios to post to the OpenAI API
+- Parsed the result string from the OpenAI API to result in an array of names that exclude the digits and dots (1. name1, 2. name2, .. => name1, name2, ..) and allowing for names consisting of multiple words as well as for words that include dots such as Mr. I used ChatGPT to derive an efficient regexp based algorithm for this parser.
+- Added a loading spinner based on MUI and emotion.
+- Extended the name generator so that it generates 5 names consisting of one word and 5 names consisting of multiple words.
+- Made the error message to bounce to be clearer.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+
+Create your own OpenAI API Key on:
+
+Create a file in the root of this project with name ".env.local" and contents:
+NEXT_PUBLIC_OPENAI_API_KEY=your-api-key
+
+Note that the key env variable needs to start with NEXT*PUBLIC* for it to work in your frontend.
 
 First, run the development server:
 
@@ -13,26 +35,3 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
