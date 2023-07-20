@@ -4,7 +4,7 @@ Based on the example code for the Packt Training: Building a ChatGPT AI with Jav
 
 An app that generates pet names using the OpenAI GPT API. The app is written using React Nextjs Axios and Typescript. Furthermore it uses MUI and emotion packages for the loading spinner.
 
-I coded the application first before watching the training, except for the index.module.css file that i took from the example training code. Furthermore I made the following of enhancements:
+I coded the application first before watching the training, except for the index.module.css file that i took from the example training code. Furthermore I made the following enhancements:
 
 - Coded in TypeScript instead of JavaScript
 - Used Axios to post to the OpenAI API
