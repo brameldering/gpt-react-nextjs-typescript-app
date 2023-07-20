@@ -35,3 +35,11 @@ pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Screenshots
+
+Start Page
+![Start Page](./public/start-page.png?raw=true "Start Page")
+
+Generated Names Page
+![Generated Names](./public/generated-names-page.png?raw=true "Generated Names")
