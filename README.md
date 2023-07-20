@@ -17,14 +17,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-Create your own OpenAI API Key on:
+Create your own OpenAI API Key on: https://platform.openai.com/account/api-keys
 
 Create a file in the root of this project with name ".env.local" and contents:
 NEXT_PUBLIC_OPENAI_API_KEY=your-api-key
 
 Note that the key env variable needs to start with NEXT*PUBLIC* for it to work in your frontend.
 
-First, run the development server:
+To run the development server:
 
 ```bash
 npm run dev
